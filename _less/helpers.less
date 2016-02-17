@@ -1,0 +1,38 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bb {
+    box-sizing: border-box; /* css3 rec */
+    -moz-box-sizing: border-box; /* ff2 */
+    -ms-box-sizing: border-box; /* ie8 */
+    -webkit-box-sizing: border-box; /* safari3 */
+    -khtml-box-sizing: border-box; /* konqueror */
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inverse {
+  background-color: @dark;
+  color: @light;
+  a {
+    color: @light;
+  }
+}
+
+.screen-reader-text {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.table {
+  display: table;
+  margin: 0 auto;
+}

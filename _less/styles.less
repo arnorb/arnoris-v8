@@ -1,0 +1,357 @@
+// @import "../bower_components/font-awesome/less/font-awesome.less";
+@import "webfonts";
+@import "helpers.less";
+@import "modular-scale.less";
+@import "variables.less";
+@import "../bower_components/normalize-css/normalize.css";
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font-family: @font-family-sans-serif;
+  color: @dark;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: @branding-color;
+  transition: all 0.2s;
+  &:hover {
+
+  }
+}
+
+h1 {
+  font-family: "Kempoka", sans-serif;
+  font-style: italic;
+}
+
+.navbar-main {
+  .bb;
+  
+  color: @light;
+  background-color: fadeout(@dark, 20%);
+
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  a {
+    color: @light;
+    text-decoration: none;
+  }
+
+  h2 {
+    font-size: @a-scale-1;
+  }
+
+  .site-width {
+    position: relative;
+  }
+
+  .site-header {
+    float: left;
+  }
+}
+
+.navbar-toggle {
+  float: right;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.front-header {
+  background:    linear-gradient(
+      rgba(79, 73, 47, 0.7), 
+      rgba(47, 56, 79, 0.7)
+    ), url('/img/arcticflowers.jpg') no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  color: @light;
+  padding-top: @b-scale-2;
+  padding-bottom: @b-scale-2;
+
+  @media (min-width: @sm-device) {
+    height: 85vh;
+    position: relative;
+    .site-width {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    padding-bottom: (@b-scale-3/@a-scale-5);
+    font-size: @a-scale-3;
+    line-height: 1;
+    @media (min-width: @sm-device) {
+      font-size: @b-scale-3;
+    }
+  }
+
+  p {
+    font-weight: 700;
+    text-transform: uppercase;
+    @media (min-width: @sm-device) {
+      font-size: @b-scale-1;
+      // font-weight: 100;
+      margin: 0;
+    }   
+  }
+  
+  background-color: darken(@light, 10%)
+
+}
+
+.portfolio-item {
+  padding-top: @b-scale-2;
+  @media (min-width: @md-device) {
+    padding-top: @b-scale-3;
+  }
+  padding-bottom: @b-scale-2;  
+
+  border-bottom: 1px solid lighten(@dark, 70%);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: @b-scale-2;
+    line-height: 1;
+    @media (min-width: @md-device) {
+      font-size: @a-scale-3;
+    }  
+  }
+}
+
+.portfolio-item-icelandmag {
+  @icelandmag: #f40201;
+  h1 {
+    color: @icelandmag;
+  }
+  .portfolio-item-link {
+    a {
+      color: @icelandmag;
+      &:hover {
+        color: darken(@icelandmag, 20%);
+      }
+    }
+  }
+} 
+.portfolio-item-kiku {
+  @kiku: #d30000;
+  h1 {
+    color: @kiku;
+  }
+  .portfolio-item-link {
+    a {
+      color: @kiku;
+      &:hover {
+        color: darken(@kiku, 20%);
+      }
+    }
+  }
+} 
+.portfolio-item-lpp {
+  @lpp: #00b0f2;
+  h1 {
+    color: @lpp;
+  }
+  .portfolio-item-link {
+    a {
+      color: @lpp;
+      &:hover {
+        color: darken(@lpp, 20%);
+      }
+    }
+  }
+} 
+.portfolio-item-visir {
+  @visir: #0170cb;
+  h1 {
+    margin-top: @a-scale--2;
+    color: @visir;
+  }
+  .portfolio-item-link {
+    a {
+      color: @visir;
+      &:hover {
+        color: darken(@visir, 20%);
+      }
+    }
+  }
+} 
+
+.portfolio-item-text {
+  padding-top: @a-scale-1;
+  @media (min-width: @sm-device) {
+    padding-top: 0;
+  }  
+}
+
+.portfolio-item-image {
+  max-width: 100%;
+}
+
+.portfolio-item-meta {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: @b-scale--2;
+  @media (min-width: @md-device) {
+    font-size: @a-scale-1;
+  }
+
+  li {
+    float: left;
+    padding-right: 1em;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  @media (min-width: @md-device) {
+    b {
+      font-weight: 500;
+    }
+  }  
+}
+
+.portfolio-item-description {
+  clear: left;
+  @media (min-width: @md-device) {
+    font-size: @b-scale-1;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: @a-scale--2;
+  }
+}
+
+.portfolio-item-link {
+  a {
+    clear: both;
+    text-decoration: none;
+    color: @dark;
+    font-weight: 600;
+    float: right;
+    &:hover {
+      color: darken(@dark, 20%);
+    }
+  }
+}
+
+.about-me {
+  padding-top: @b-scale-2;
+  padding-bottom: @a-scale-2;
+  .inverse;
+  @media (min-width:@xm-device) {
+    padding-bottom: @b-scale-3;
+    margin-top: @b-scale-1;
+    .table {
+      margin: 0;
+    }
+  }
+}
+
+.about-me-image {
+  width: 70%;
+  margin: 0 auto;
+  img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  @media (min-width:@xm-device) {
+    float: right;
+    margin-left: @a-scale-2;
+    width: 33%;
+  }
+}
+
+.about-me-links {
+  list-style-type: none;
+  float: left;
+  margin-bottom: 0;
+  padding-left: 0;
+  li {
+    padding-right: @a-scale-1;
+    float: left;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  a {
+    display: inline-block;
+    font-size: @a-scale-2;
+    line-height: 1;
+    color: @light;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+      color: lighten(@light, 10%);      
+    }
+  }
+}
+
+.about-me-headline {
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: @b-scale-2;
+    line-height: 1.5;
+    @media (min-width: @md-device) {
+      font-size: @a-scale-3;
+    }  
+  }
+}
+
+.about-me-text {
+  @media (min-width: @md-device) {
+    font-weight: 100;
+  }  
+  
+}
+
+.about-me-description {
+  @media (min-width: @md-device) {
+    font-size: @b-scale-1;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: @a-scale--2;
+  }
+}
+
+[data-icon]:before {
+  font-family: 'icomoon';
+  content: attr(data-icon);
+  speak: none;
+}
+
+.site-width {
+  width: @site-width;
+  max-width: 90%;
+  margin: 0 auto;
+  clear: left;
+}
+
+.copy-width {
+  width: 100%;
+  max-width: @lg-device;
+  margin: 0 auto;
+  @media (min-width: @sm-device) {
+    width: 82%;
+  }
+}
+
+.footer {
+  padding: @b-scale-1;
+  text-align: center;
+  .inverse;
+}
